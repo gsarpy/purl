@@ -1,0 +1,32 @@
+{
+  "name": "purl",
+  "version": "0.0.1",
+  "description": "A minimal URL shortener using NodeJS, Express and MongoDB",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gsarpy/purl.git"
+  },
+  "keywords": [
+    "shortener",
+    "url",
+    "url",
+    "shortener",
+    "node",
+    "nodejs",
+    "mondogb",
+    "express"
+  ],
+  "author": "Gregory Sarpy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gsarpy/purl/issues"
+  },
+  "homepage": "https://github.com/gsarpy/purl#readme",
+  "dependencies": {
+    "express": "^4.14.1"
+  }
+}
