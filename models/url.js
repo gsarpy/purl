@@ -22,5 +22,16 @@ var urlSchema = new Schema({
 urlSchema.pre('save', function(next){
 	var doc = this; 
 	// find the url_count and increment by 1
-	counter.findByIdAndUpdate({
+	counter.findByIdAndUpdate({ _id: "url_count"}, {"$inc": {seq: 1}}, {"new": true, "upsert": true }, function(error, counter){
+		if (error)
+			return next(error);
+		// set the _id of the urls collection to the incremented value of the counter
+		doc._id = counter.seq;
+		doc.created_at = new Date();
+		next();
+	});
 });
+
+var Url = mongoose.model('Url', urlSchema);
+
+module.exports = Url;
